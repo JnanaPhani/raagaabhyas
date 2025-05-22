@@ -1,0 +1,100 @@
+/* -------------------- */
+/* CSS Variables        */
+/* -------------------- */
+:root {
+    --primary-background: #FDFCEE; /* Warm white / golden white */
+    --secondary-accent: #8B4513;   /* Violin brown */
+    --text-color: #333333;         /* Dark gray for general text */
+    --heading-color: #5A2D0C;      /* Darker brown for headings */
+    --container-background: #FFFFFF; /* Optional: if you want app-container to be pure white */
+}
+
+/* -------------------- */
+/* Global Resets & Defaults */
+/* -------------------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* -------------------- */
+/* Body Styling         */
+/* -------------------- */
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif; /* Traditional serif font */
+    line-height: 1.6;
+    background-color: var(--primary-background);
+    color: var(--text-color);
+
+    /* Responsive centering for the main content flow */
+    max-width: 1100px; /* Adjust as needed for your content's ideal width */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px; /* Add some padding so content isn't flush against edges on smaller screens */
+}
+
+/* -------------------- */
+/* Typography           */
+/* -------------------- */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-color);
+    margin-bottom: 0.75em;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.5rem; /* Example size */
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+a {
+    color: var(--secondary-accent);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+/* -------------------- */
+/* Main App Container   */
+/* -------------------- */
+#app-container {
+    background-color: var(--container-background, #fff); /* Uses variable or falls back to white */
+    padding: 25px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--secondary-accent); /* Using accent for a subtle border */
+    margin-top: 20px; /* Add some space if there's content above it directly in body */
+    margin-bottom: 20px;
+}
+
+/* -------------------- */
+/* Utility (Optional)   */
+/* -------------------- */
+.text-center {
+    text-align: center;
+}
+
+/* Example of using the accent color more prominently if needed */
+/*
+.button-primary {
+    background-color: var(--secondary-accent);
+    color: var(--primary-background);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-primary:hover {
+    opacity: 0.9;
+}
+*/
